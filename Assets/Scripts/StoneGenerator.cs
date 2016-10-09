@@ -3,6 +3,7 @@ using System.Collections;
 
 public class StoneGenerator : MonoBehaviour {
 
+    public Vector3 scale;
     public float repeatRate;
     public float rangeLimit;
     public float initialForce;
@@ -24,7 +25,7 @@ public class StoneGenerator : MonoBehaviour {
 
 //        int randomStone = (int) (Random.value * numStones);
         GameObject stone = (GameObject) Instantiate(stones[(int) Random.Range(0.0f, 12.0f)], randomPos, Quaternion.identity);
-        stone.transform.localScale = Random.insideUnitSphere;
+        stone.transform.localScale = scale;
         stone.AddComponent<Rigidbody>();
         stone.GetComponent<Rigidbody>().AddForce(Random.insideUnitSphere * initialForce);
         stone.GetComponent<Rigidbody>().AddTorque(Random.insideUnitSphere * initialTorque);

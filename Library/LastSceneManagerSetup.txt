@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/EarthSimplePlanets/Scenes/SimplePlanetEarth.unity
+- path: Assets/Scene/main.unity
   isLoaded: 1
   isActive: 1
