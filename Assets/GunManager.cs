@@ -5,7 +5,6 @@ public class GunManager : MonoBehaviour {
 
     public GameObject bulletPrefab;
     public float bulletSpeed;
-    public 
 	// Use this for initialization
 	void Start () {
 	

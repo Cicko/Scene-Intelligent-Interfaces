@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 1000011863862560, guid: 8bd60e665aae75745b5dae8bde032e50, type: 2}
-  cubeSize: 10
-  height: 5
-  width: 2
+  cubeSize: 30
+  height: 10
+  width: 10
   deep: 2
