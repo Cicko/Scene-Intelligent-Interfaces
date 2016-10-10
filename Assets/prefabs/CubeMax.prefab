@@ -392,3 +392,4 @@ MonoBehaviour:
   - {fileID: 4000012383716986}
   - {fileID: 4000013571731846}
   - {fileID: 4000013411016368}
+  impulseForce: 100

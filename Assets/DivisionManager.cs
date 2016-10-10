@@ -5,8 +5,9 @@ public class DivisionManager : MonoBehaviour {
     
     public GameObject dividedCube;
     public Transform[] spawns;
-	// Use this for initialization
-	void Start () {
+    public float impulseForce;
+    // Use this for initialization
+    void Start () {
 
 
             dividedCube.transform.localScale = new Vector3(transform.localScale.x / 2,
@@ -19,21 +20,19 @@ public class DivisionManager : MonoBehaviour {
 
     void OnCollisionEnter (Collision col)
     {
-            if (col.relativeVelocity.magnitude > 500)
+        
+            if (col.gameObject.tag == "Bullet")
             {
                 dividedCube.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
                 for (int i = 0; i < spawns.Length; i++)
                 {
-                    Instantiate(dividedCube, spawns[i].position, Quaternion.identity);
+                 GameObject gm = (GameObject) Instantiate(dividedCube, spawns[i].position, Quaternion.identity);
+                    gm.GetComponent<Rigidbody>().AddForce(col.impulse * impulseForce);
                 }
-            Destroy(this.gameObject);
+                Destroy(this.gameObject);
             }
 
              
     }
-
-    void DestroyIt ()
-    {
-        Destroy(this.gameObject);
-    }
+    
 }
