@@ -24,11 +24,11 @@ public class DivisionManager : MonoBehaviour {
             if (col.gameObject.tag == "Bullet")
             {
                 dividedCube.GetComponent<Renderer>().material = GetComponent<Renderer>().material;
-                for (int i = 0; i < spawns.Length; i++)
-                {
-                 GameObject gm = (GameObject) Instantiate(dividedCube, spawns[i].position, Quaternion.identity);
-                    gm.GetComponent<Rigidbody>().AddForce(col.impulse * impulseForce);
-                }
+
+                int spawn = Random.Range(0, spawns.Length - 1);
+                GameObject gm = (GameObject) Instantiate(dividedCube, spawns[spawn].position, Quaternion.identity);
+                gm.GetComponent<Rigidbody>().AddForce(col.impulse * impulseForce);
+                
                 Destroy(this.gameObject);
             }
 

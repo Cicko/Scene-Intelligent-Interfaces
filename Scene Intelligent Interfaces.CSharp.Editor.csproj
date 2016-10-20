@@ -91,6 +91,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Google.ProtocolBuffers">
+      <HintPath>Assets\Plugins\Google.ProtocolBuffers.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Scene Intelligent Interfaces.CSharp.Plugins.csproj">
@@ -118,8 +121,21 @@
     <Compile Include="Assets\Editor\ImageEffects\SunShaftsEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrAudioListenerEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrAudioRoomEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrAudioSoundfieldEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrAudioSourceEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Editor\GvrGazeEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrMenu.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrViewerEditor.cs" />
+    <Compile Include="Assets\GoogleVR\Legacy\Editor\StereoControllerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
+    <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
+    <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
+    <None Include="Assets\GoogleVR\Resources\UI\GvrReticleShader.shader" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
