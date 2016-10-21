@@ -728,7 +728,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1157374923}
-  m_Text: Press Space pointing to me! :)
+  m_Text: Press Space while pointing me! :)
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -898,6 +898,8 @@ GameObject:
   - 124: {fileID: 1208685115}
   - 92: {fileID: 1208685114}
   - 81: {fileID: 1208685113}
+  - 114: {fileID: 1208685118}
+  - 114: {fileID: 1208685119}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -974,6 +976,35 @@ Transform:
   - {fileID: 812020009}
   m_Father: {fileID: 183696159}
   m_RootOrder: 5
+--- !u!114 &1208685118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1208685112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -768656878, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1208685119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1208685112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e330faaee40a44914a7a28f410e83c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerObject: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1223164004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1092,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1334546733}
   - 114: {fileID: 1334546732}
+  - 114: {fileID: 1334546734}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1098,6 +1130,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1334546734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334546731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!1 &1350657854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1183,8 @@ GameObject:
   - 65: {fileID: 1852322123}
   - 23: {fileID: 1852322122}
   - 54: {fileID: 1852322121}
+  - 114: {fileID: 1852322126}
+  - 114: {fileID: 1852322127}
   m_Layer: 0
   m_Name: GiantCube
   m_TagString: Untagged
@@ -1221,3 +1268,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!114 &1852322126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852322120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f11016ba65f2746a4f956a867070f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 9.43
+--- !u!114 &1852322127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852322120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1852322126}
+          m_MethodName: maximumForce
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []

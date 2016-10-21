@@ -120,6 +120,7 @@
     <Compile Include="Assets\GoogleVR\Scripts\UI\IGvrGazePointer.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\UI\IGvrGazeResponder.cs" />
     <Compile Include="Assets\GunManager.cs" />
+    <Compile Include="Assets\GvrGazeReceiver.cs" />
     <Compile Include="Assets\MapGenerator.cs" />
     <Compile Include="Assets\PhysicsManager.cs" />
     <Compile Include="Assets\Scripts\Scenecontroller.cs" />
